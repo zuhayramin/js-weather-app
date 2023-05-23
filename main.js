@@ -36,7 +36,7 @@ function setValue(selector, value, {parent = document} = {}){
 const currentIcon = document.querySelector('[data-current-icon]')
 
 function getIconUrl(iconCode) {
-    return `icons/${ICON_MAP.get(iconCode)}.png`
+    return `icons/${ICON_MAP.get(iconCode)}.svg`
 }
 
 function renderCurrentWeather(current) {
