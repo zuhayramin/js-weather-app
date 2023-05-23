@@ -33,8 +33,8 @@ body {
 }
 
 .weather-icon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
     color: rgb(14, 95, 14);
 }
@@ -103,18 +103,19 @@ body {
     border-spacing: 0;
 }
 
-tr {
-    color: pink;
-}
-
 .hour-row {
     background-color: rgb(147, 228, 147);
 }
 
 .hour-row:nth-child(2n){
-    background-color: rgb(177, 249, 177);
+    background-color: rgb(195, 255, 195);
 }
 
 .hour-row > td {
-    padding: 0.25rem 0.5rem;
+    padding: 1rem 0.5rem;
+    width: calc(100%/6);
+}
+
+.weather-icon {
+    color: rgb(0, 63, 0);
 }

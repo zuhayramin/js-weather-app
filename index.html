@@ -5,14 +5,14 @@
     <link rel="stylesheet" href="./style.css">
     <title>Weather App</title>
 </head>
-<body>
+<body class="blurred">
     <header class="header">
         <div class="header-left">
             <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
             <div class="header-current-temp">
                 <!-- The reason I used a span is so that I can change the
                     temperature while still keeping the degree symbol -->
-                <span data-current-icon>31</span>&deg;
+                <span data-current-temp>31</span>&deg;
             </div>
         </div>
         <div class="header-right">
@@ -191,14 +191,14 @@
         </tbody>
     </table>
 
-    <template class="day-card-template">
+    <template id="day-card-template">
         <div class="day-card">
-            <img data-icon class="weather-icon" />
-            <div class="day-card-day"></div>
+            <img data-icon class="weather-icon" style="color: rgb(0,63,0)" /> 
+            <div class="day-card-day" data-date></div>
             <div><span data-temp></span><span>&deg;</span></div>
         </div>
     </template>
-    <template class="hour-row-template">
+    <template id="hour-row-template">
         <tr class="hour-row">
             <td>
                 <div class="info-group">
@@ -206,12 +206,12 @@
                     <div data-time></div>
                 </div>
             </td>
-            <td>
+            <td class="td-icon">
                 <img data-icon class="weather-icon" />
             </td>
             <td>
                 <div class="info-group">
-                    <div class="label">TEMP</div>
+                    <div class="label">Temp</div>
                     <div><span data-temp></span><span>&deg;</span></div>
                 </div>
             </td>
@@ -221,15 +221,15 @@
                     <div><span data-fl-temp></span><span>&deg;</span></div>
                 </div>
             </td>
-            <td>
+            <td class="td-wind">
                 <div class="info-group">
-                    <div class="label">WIND</div>
-                    <div><span data-wind></span></div><span class="value-sub-info"> mph</span></div>
+                    <div class="label">Wind</div>
+                    <div><span data-wind></span><span class="value-sub-info"> kph</span></div>
                 </div>
             </td>
             <td>
                 <div class="info-group">
-                    <div class="label">PRECIP</div>
+                    <div class="label">Precip</div>
                     <div><span data-precip></span><span class="value-sub-info"> in</span></div>
                 </div>
             </td>
